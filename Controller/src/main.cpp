@@ -1,4 +1,29 @@
 #include <Arduino.h>
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(2, INPUT_PULLUP);
+  pinMode(3, INPUT_PULLUP);
+  pinMode(4, INPUT_PULLUP);
+  pinMode(5, INPUT_PULLUP);
+
+}
+
+void loop() {
+  Serial.print("\n");
+  Serial.print("Port 2:"+String(digitalRead(2)));
+  Serial.print("\n");
+  Serial.print("Port 3:"+String(digitalRead(3)));
+  Serial.print("\n");
+  Serial.print("Port 4:"+String(digitalRead(4)));
+  Serial.print("\n");
+  Serial.print("Port 5:"+String(digitalRead(5)));
+  Serial.print("\n");
+  // delay(2000);
+}
+
+
+/*
 #include "BMI088.h"
 
 float ax = 0, ay = 0, az = 0;
@@ -52,3 +77,4 @@ void loop() {
     delay(50);
   
 }
+*/

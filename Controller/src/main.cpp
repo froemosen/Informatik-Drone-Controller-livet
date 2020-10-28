@@ -16,6 +16,7 @@ void setup() {
 }
 
 void loop() {
+  /*
   Serial.print("\n");
   Serial.print("Port 2:"+String(digitalRead(2)));
   Serial.print("\n");
@@ -27,6 +28,9 @@ void loop() {
   Serial.print("\n");
   Serial.print("Port 6:"+String(digitalRead(6)));
   Serial.print("\n");
+  */
+
+ 
 
   if(digitalRead(2) == 0 && btn0_upagain == true) {
     bool btn0 = true;
@@ -110,6 +114,25 @@ void loop() {
     bool btn2_upagain = true;
     bool btn3_upagain = true;
     bool btn4_upagain = true;
+  }
+  if(btn0==true) {
+    Serial.print("btn0")
+  }
+
+  if(btn1==true) {
+    Serial.print("btn1")
+  }
+
+  if(btn2==true) {
+    Serial.print("btn2")
+  }
+
+  if(btn3==true) {
+    Serial.print("btn3")
+  }
+
+  if(btn4==true) {
+    Serial.print("btn4")
   }
   
 }

@@ -2,7 +2,7 @@
 import serial
 import sys
 
-serialPortName = "COM7"
+serialPortName = "COM6"
 baudRate = 9600
 try:
 	s = serial.Serial(serialPortName,baudRate,timeout=1)
@@ -19,6 +19,8 @@ try:
 		if(s.in_waiting>0):
 			rxLine=s.readline().decode("ascii").strip()
 			print("Recieved:",rxLine)
+
+
 
 			#This is where i would unpack the recieved data with the right protocol
 			#hints: 

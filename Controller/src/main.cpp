@@ -1,15 +1,4 @@
 #include <Arduino.h>
-bool btn0_upagain = true;
-bool btn1_upagain = true;
-bool btn2_upagain = true;
-bool btn3_upagain = true;
-bool btn4_upagain = true;
-
-bool btn0 = false;
-bool btn1 = false;
-bool btn2 = false;
-bool btn3 = false;
-bool btn4 = false;
 
 void setup() {
   Serial.begin(9600);
@@ -29,5 +18,4 @@ void loop() {
 
 
   Serial.println(String(digitalRead(2))+","+String(digitalRead(3))+","+String(digitalRead(4))+","+String(digitalRead(5))+","+String(digitalRead(6))+","+String(Joy0x)+","+String(Joy0y)+","+String(Joy1x)+","+String(Joy1y)+",");
-
 }

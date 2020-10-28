@@ -1,4 +1,15 @@
 #include <Arduino.h>
+bool btn0_upagain = true;
+bool btn1_upagain = true;
+bool btn2_upagain = true;
+bool btn3_upagain = true;
+bool btn4_upagain = true;
+
+bool btn0 = false;
+bool btn1 = false;
+bool btn2 = false;
+bool btn3 = false;
+bool btn4 = false;
 
 void setup() {
   Serial.begin(9600);
@@ -7,31 +18,20 @@ void setup() {
   pinMode(4, INPUT_PULLUP);
   pinMode(5, INPUT_PULLUP);
   pinMode(6, INPUT_PULLUP);
-
-  bool btn0_upagain = true;
-  bool btn1_upagain = true;
-  bool btn2_upagain = true;
-  bool btn3_upagain = true;
-  bool btn4_upagain = true;
 }
 
 void loop() {
-  /*
-  Serial.print("\n");
-  Serial.print("Port 2:"+String(digitalRead(2)));
-  Serial.print("\n");
-  Serial.print("Port 3:"+String(digitalRead(3)));
-  Serial.print("\n");
-  Serial.print("Port 4:"+String(digitalRead(4)));
-  Serial.print("\n");
-  Serial.print("Port 5:"+String(digitalRead(5)));
-  Serial.print("\n");
-  Serial.print("Port 6:"+String(digitalRead(6)));
-  Serial.print("\n");
-  */
+  float Joy0x = float(analogRead(A0));
+  float Joy0y = float(analogRead(A1));
+  float Joy1x = float(analogRead(A2));
+  float Joy1y = float(analogRead(A3));
 
- 
 
+
+  Serial.println(String(digitalRead(2))+","+String(digitalRead(3))+","+String(digitalRead(4))+","+String(digitalRead(5))+","+String(digitalRead(6))+","+String(Joy0x)+","+String(Joy0y)+","+String(Joy1x)+","+String(Joy1y)+",");
+
+}
+/*
   if(digitalRead(2) == 0 && btn0_upagain == true) {
     bool btn0 = true;
     bool btn1 = false;
@@ -116,28 +116,28 @@ void loop() {
     bool btn4_upagain = true;
   }
   if(btn0==true) {
-    Serial.print("btn0")
+    Serial.println("btn0");
   }
 
   if(btn1==true) {
-    Serial.print("btn1")
+    Serial.println("btn1");
   }
 
   if(btn2==true) {
-    Serial.print("btn2")
+    Serial.println("btn2");
   }
 
   if(btn3==true) {
-    Serial.print("btn3")
+    Serial.println("btn3");
   }
 
   if(btn4==true) {
-    Serial.print("btn4")
+    Serial.println("btn4");
   }
   
 }
 
-
+*/
 /*
 #include "BMI088.h"
 

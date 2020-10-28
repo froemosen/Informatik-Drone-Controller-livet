@@ -2,9 +2,9 @@
 import serial
 import sys
 
-serialPortName = "COM4"
-baudRate = 115200
-try:s
+serialPortName = "COM7"
+baudRate = 9600
+try:
 	s = serial.Serial(serialPortName,baudRate,timeout=1)
 except:
 	print("Failed to open", serialPortName, "as a serial port.. are you doing this right?")

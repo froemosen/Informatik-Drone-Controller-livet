@@ -36,10 +36,10 @@ void loop() {
     bool btn4 = false;
 
     bool btn0_upagain = false;
-    bool btn1_upagain = true;
-    bool btn2_upagain = true;
-    bool btn3_upagain = true;
-    bool btn4_upagain = true;
+    //bool btn1_upagain = true;
+    //bool btn2_upagain = true;
+    //bool btn3_upagain = true;
+    //bool btn4_upagain = true;
   }
 
   else if(digitalRead(3) == 0 && btn1_upagain == true) {
@@ -49,11 +49,11 @@ void loop() {
     bool btn3 = false;
     bool btn4 = false;
   
-    bool btn0_upagain = true;
+    //bool btn0_upagain = true;
     bool btn1_upagain = false;
-    bool btn2_upagain = true;
-    bool btn3_upagain = true;
-    bool btn4_upagain = true;
+    //bool btn2_upagain = true;
+    //bool btn3_upagain = true;
+    //bool btn4_upagain = true;
   }
 
   else if(digitalRead(4) == 0 && btn2_upagain == true) {
@@ -63,11 +63,11 @@ void loop() {
     bool btn3 = false;
     bool btn4 = false;
   
-    bool btn0_upagain = true;
-    bool btn1_upagain = true;
+    //bool btn0_upagain = true;
+    //bool btn1_upagain = true;
     bool btn2_upagain = false;
-    bool btn3_upagain = true;
-    bool btn4_upagain = true;
+    //bool btn3_upagain = true;
+    //bool btn4_upagain = true;
   }
 
   else if(digitalRead(5) == 0 && btn3_upagain == true) {
@@ -77,11 +77,11 @@ void loop() {
     bool btn3 = true;
     bool btn4 = false;
 
-    bool btn0_upagain = true;
-    bool btn1_upagain = true;
-    bool btn2_upagain = true;
+    //bool btn0_upagain = true;
+    //bool btn1_upagain = true;
+    //bool btn2_upagain = true;
     bool btn3_upagain = false;
-    bool btn4_upagain = true;
+    //bool btn4_upagain = true;
   }
 
   else if(digitalRead(6) == 0 && btn4_upagain == true) {
@@ -91,10 +91,10 @@ void loop() {
     bool btn3 = false;
     bool btn4 = true;
 
-    bool btn0_upagain = true;
-    bool btn1_upagain = true;
-    bool btn2_upagain = true;
-    bool btn3_upagain = true;
+    //bool btn0_upagain = true;
+    //bool btn1_upagain = true;
+    //bool btn2_upagain = true;
+    //bool btn3_upagain = true;
     bool btn4_upagain = false;
   }
 

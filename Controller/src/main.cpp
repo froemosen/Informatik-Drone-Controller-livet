@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(9000);
 
   //Pins (knapper) defineres(Port, Type af Input)
   pinMode(2, INPUT_PULLUP);

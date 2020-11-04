@@ -4,7 +4,7 @@ import sys
 import controller
 
 serialPortName = "COM8" #Skal sandsynligvis ændres. Kommer an på porten som arduino sidder i.  
-baudRate = 9600 #Defineret i main.cpp
+baudRate = 9000 #Defineret i main.cpp
 fejlStop = 0 #Bruges til at programmet forsøget at finde data mere end én gang. (Vi oplevede crashes fordi at serial.readline ikke var 100% reliable)
 try:
 	s = serial.Serial(serialPortName,baudRate,timeout=1)
@@ -41,7 +41,7 @@ while(True):
 				
 	except:
 		print("Fejl efter tilslutning til serial (Fejlopsætning af arduino?)\nLeder efter ny data\n")
-		fejlStop+=1
+		fejlStop+=1 
 
 		if fejlStop > 30: #Der bliver ledt efter data 30 gange, da den ikke altid kan frembringe data første gang. 
 			print("Fejl efter 30 forsøg. Lukker programmet efter input") #Efter 30 forsøg er det sikkert at systemet har en fejl. 

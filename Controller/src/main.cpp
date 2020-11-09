@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
 void setup() {
-  Serial.begin(9000);
+  Serial.begin(9600);
 
   //Pins (knapper) defineres(Port, Type af Input)
   pinMode(2, INPUT_PULLUP);
@@ -20,5 +20,5 @@ void loop() {
 
 
   //Data printes i serial
-  Serial.println(String(digitalRead(2))+","+String(digitalRead(3))+","+String(digitalRead(4))+","+String(digitalRead(5))+","+String(digitalRead(6))+","+String(Joy0x)+","+String(Joy0y)+","+String(Joy1x)+","+String(Joy1y)+",");
+  Serial.println(String(digitalRead(2))+","+String(digitalRead(3))+","+String(digitalRead(4))+","+String(digitalRead(5))+","+String(digitalRead(6))+","+String(Joy0x)+","+String(Joy0y)+","+String(Joy1x)+","+String(Joy1y));
 }

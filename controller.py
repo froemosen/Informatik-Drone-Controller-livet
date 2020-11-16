@@ -1,25 +1,34 @@
 import tellopy
-#drone = tellopy.Tello(port=9000) #Drone defineres
-#drone.connect() #Virker det her? heh
-#drone.start_video() #Virker det her? he#Virker det her? hehh
+drone = tellopy.Tello(port=9000) #Drone defineres
+drone.connect() #Connection mellem program og drone etableres
 
 
 
 
 def main(btn0, btn1, btn2, btn3, btn4, joy0x, joy0y, joy1x, joy1y): 
-    #Her skal alle kommandoer osv til dronen skrives ind. Lige nu printer programmet bare variablerne ud. 
+	#Her skal alle kommandoer  osv til dronen skrives ind. Lige nu printer programmet bare variablerne ud. 
+	print("btn0:", btn0)
+	print("btn1:", btn1)
+	print("btn2:", btn2)
+	print("btn3:", btn3)
+	print("btn4:", btn4)
+	print("joy0x:", joy0x)
+	print("joy0y:", joy0y)
+	print("joy1x:", joy1x)
+	print("joy1y:", joy1y)
     
-    print("btn0:", btn0)
-    print("btn1:", btn1)
-    print("btn2:", btn2)
-    print("btn3:", btn3)
-    print("btn4:", btn4)
-    print("joy0x:", joy0x)
-    print("joy0y:", joy0y)
-    print("joy1x:", joy1x)
-    print("joy1y:", joy1y)
-    
-    """
+	if not btn0:
+		drone.quit()
+	
+	elif not btn1:
+		drone.land()
+	
+	elif not btn2:
+    	drone.takeoff()
+	
+	elif
+		drone.
+	"""
     #Script til dronebevægelse køres, med variablerne
 				if btn0 == False and btn0Cool == False:
 					btn0Cool = True
@@ -108,5 +117,6 @@ def main(btn0, btn1, btn2, btn3, btn4, joy0x, joy0y, joy1x, joy1y):
     """
 
     
-
+while True:
+    	main()
     #Joysticks? - Skal de være sådan skala-baserede hvor den flyver hurtigere når den er meget rykket?

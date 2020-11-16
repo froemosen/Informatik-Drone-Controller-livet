@@ -1,28 +1,15 @@
 import tellopy
 import time
-
-drone = tellopy.Tello()
-
+drone = tellopy.Tello(port=9000)
 drone.connect()
+drone.wait_for_connection(10)
 
-while True:
-    if drone.connected:
-        drone.takeoff()
+drone.takeoff()
 
-        time.sleep(4)
+time.sleep(5)
 
-        drone.flip_forward()
+drone.EMERGENCY_CMD
 
-        time.sleep(4)
+time.sleep(5)
 
-        drone.flip_back()
-
-        time.sleep(4)
-
-        drone.clockwise(360)
-
-        time.sleep(15)
-        drone.land()
-
-    else: 
-        pass
+drone.land()

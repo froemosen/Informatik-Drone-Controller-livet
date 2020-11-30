@@ -6,9 +6,9 @@ drone.wait_for_connection(10)
 
 drone.takeoff()
 
-time.sleep(5)
+time.sleep(3)
 
-drone.EMERGENCY_CMD
+drone.send_packet_data("emergency")
 
 time.sleep(5)
 
